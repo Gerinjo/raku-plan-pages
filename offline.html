@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#167647" />
+    <title>Gerade offline · raku.</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: #f6f8f7;
+        color: #25392c;
+        font:
+          16px/1.65 system-ui,
+          sans-serif;
+      }
+      main {
+        width: min(100%, 440px);
+        padding: 32px;
+        background: white;
+        border: 1px solid #dce8de;
+        border-radius: 16px;
+      }
+      .brand {
+        color: #167647;
+        font-size: 32px;
+        font-weight: 800;
+        margin: 0;
+      }
+      h1 {
+        font-size: 26px;
+        line-height: 1.25;
+        margin: 22px 0 16px;
+      }
+      p {
+        color: #617867;
+      }
+      button {
+        min-height: 48px;
+        padding: 12px 18px;
+        border: 0;
+        border-radius: 7px;
+        background: #167647;
+        color: white;
+        font: inherit;
+        cursor: pointer;
+      }
+      button:focus-visible {
+        outline: 3px solid #7faa8d;
+        outline-offset: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="brand">raku.</p>
+      <h1>Du bist gerade offline.</h1>
+      <p>
+        Für aktuelle Trainingszeiten und Buchungen brauchst du eine
+        Internetverbindung. Verbinde dich und öffne den Belegungsplan erneut.
+      </p>
+      <button type="button" onclick="window.location.reload()">
+        Erneut versuchen
+      </button>
+    </main>
+  </body>
+</html>
